@@ -14,7 +14,7 @@ exports.handler = (event, handler, callback) => {
     var cmd = 'echo -n "' + input + '" | md5sum | sed "s/ -//"';
        
     //value = "test"
-if (!/^[a-z0-9 .-]*$/i.test(input)) 
+/*if (!/^[a-z0-9 .-]*$/i.test(input)) 
 {
         console.log('Bad input for ' + input);
         callback(null, 
@@ -22,7 +22,7 @@ if (!/^[a-z0-9 .-]*$/i.test(input))
                 statusCode: 400,
                 body: "Utiliser seulement des lettres, numeros, point, tiret et espace!"
         });
-}
+}*/
 
     // execute the full command
     exec(cmd, (error, stdout, stderr) => {
